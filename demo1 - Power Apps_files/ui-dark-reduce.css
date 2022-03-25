@@ -1,0 +1,170 @@
+﻿@font-face {
+  font-family: "Symbols";
+  src: url(../fonts/Symbols.woff) format('woff'),
+       url(../fonts/Symbols.ttf) format('ttf');
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  cursor: default;
+  -moz-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  -ms-scroll-translation: vertical-to-horizontal;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html {
+  overflow: hidden;
+}
+body {
+  -ms-content-zooming: none;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.333;
+}
+iframe {
+  border: 0;
+}
+body,
+.win-type-xx-large,
+.win-type-x-large,
+.win-type-large,
+.win-type-medium,
+.win-type-small,
+.win-type-x-small,
+.win-type-xx-small,
+input,
+textarea,
+.win-textarea,
+button,
+select,
+option {
+  font-family: "Segoe UI";
+}
+
+.win-rating {
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -ms-flex-pack: self;
+  -webkit-justify-content: self;
+  justify-content: self;
+  -ms-flex-align: stretch;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  height: auto;
+  width: auto;
+  white-space: normal;
+  outline: 0;
+}
+.win-rating .win-star {
+  -ms-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  height: 28px;
+  width: 28px;
+  padding: 0 6px;
+  font-family: "Segoe UI Symbol", "Symbols";
+  font-size: 28px;
+  overflow: hidden;
+  text-indent: 0;
+  line-height: 1;
+  cursor: default;
+  position: relative;
+  letter-spacing: 0;
+  -ms-touch-action: none;
+  touch-action: none;
+}
+.win-rating.win-small .win-star {
+  width: 14px;
+  height: 14px;
+  font-size: 14px;
+  padding: 0 3px;
+}
+.win-rating .win-star:before {
+  content: "\E082";
+}
+.win-rating .win-star.win-disabled {
+  cursor: default;
+  -ms-touch-action: auto;
+  touch-action: auto;
+}
+/*
+Flyout control.
+*/
+.win-flyout {
+  z-index: 1008;
+  position: fixed;
+  position: -ms-device-fixed;
+  padding: 12px;
+  border-style: solid;
+  border-width: 2px;
+  margin: 5px;
+  min-width: 68px;
+  /* 96px - padding - border */
+  max-width: 404;
+  /* 432px - padding - border */
+  min-height: 16px;
+  /* 44px - padding - border */
+  max-height: 492px;
+  /* 520px - padding - border */
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+  overflow: auto;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.333;
+}
+.win-flyout.win-leftalign {
+  margin-left: 0;
+}
+.win-flyout.win-rightalign {
+  margin-right: 0;
+}
+.win-flyout.win-scrolls {
+  overflow: auto;
+}
+/*range*/
+input[type=range] {
+  width: 280px;
+  height: 32px;
+  padding: 17px 0px 32px 0px;
+  -webkit-appearance: none;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-ms-track {
+  padding: 0px;
+  width: auto;
+  height: 12px;
+  border-style: none;
+}
+input[type=range]::-ms-thumb {
+  width: 12px;
+  height: 32px;
+  border: 1px solid white;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 32px;
+  width: 12px;
+  margin-top: -10px;
+  border: 1px solid white;
+}
+input[type=range].zoom-slider::-ms-track {
+    border: 0px;
+}
+/*this is needed form correct viewport space calculation input chrome*/
+.win-visualviewport-space {
+  position: fixed;
+  position: -ms-device-fixed;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+}

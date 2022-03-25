@@ -1,0 +1,4 @@
+(window.bundleExecutionMarkers=window.bundleExecutionMarkers||{})["scripts/onnavigation.js?v=1.4.3886-master"]={begin:performance.now()},(window.__wpJsonpUci=window.__wpJsonpUci||[]).push([[152],{"/nFP":function(n,e,i){"use strict";i.r(e),i.d(e,"onNavigation",(function(){return a}));var o=i("q5Ef");
+/**
+ * @license Copyright (c) Microsoft Corporation. All rights reserved.
+ */function a(n){return{type:"preview.navigation",execute:({},e)=>(e.TraceManager.getTracer("Preview.Navigation").info("Notifying host of UCI navigation"),e.PreviewSyncChannel.send({actionName:"OnNavigation",actionData:n,type:o.UCISyncMessageType.UCISyncMessage}),Promise.resolve())}}}}]),window.bundleExecutionMarkers["scripts/onnavigation.js?v=1.4.3886-master"].end=window.performance.now(),window.reportBundleExecutionTimes&&window.reportBundleExecutionTimes();

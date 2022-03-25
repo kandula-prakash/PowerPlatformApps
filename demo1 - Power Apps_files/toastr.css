@@ -1,0 +1,195 @@
+﻿.toast-title {
+  font-weight: bold;
+}
+.toast-message {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+.toast-message a,
+.toast-message label {
+  color: #000000;
+}
+.toast-message a:hover {
+  color: #333333;
+  text-decoration: none;
+}
+.toast-close-button {
+  position: relative;
+  right: -0.3em;
+  top: -0.3em;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+  -webkit-text-shadow: 0 1px 0 #000000;
+  text-shadow: 0 1px 0 #000000;
+  opacity: 0.8;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  filter: alpha(opacity=80);
+}
+.toast-close-button:hover,
+.toast-close-button:focus {
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.4;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  filter: alpha(opacity=40);
+}
+/*Additional properties for button version
+ iOS requires the button element instead of an anchor tag.
+ If you want the anchor version, it requires `href="#"`.*/
+button.toast-close-button {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+.toast-top-center {
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+.toast-bottom-center {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+.toast-top-full-width {
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+.toast-bottom-full-width {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+.toast-top-left {
+  top: 12px;
+  left: 12px;
+}
+.toast-top-right {
+  top: 12px;
+  right: 12px;
+}
+.toast-bottom-right {
+  right: 12px;
+  bottom: 12px;
+}
+.toast-bottom-left {
+  bottom: 12px;
+  left: 12px;
+}
+
+.player-toast-area .toast-top-full-width {
+    position: absolute !important;
+    z-index: 999999 !important;
+}
+
+#toast-container {
+  position: relative;
+  /*this had to be modifed to be less than the backstage z-index*/
+  z-index: 1000;
+  pointer-events: none;
+  /*overrides*/
+}
+#toast-container * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#toast-container > div {
+  position: relative;
+  pointer-events: auto;
+  overflow: hidden;
+  margin: 0 0 6px;
+  padding: 15px 15px 15px 50px;
+  width: 300px;
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  -moz-box-shadow: 0 0 12px #666666;
+  -webkit-box-shadow: 0 0 12px #666666;
+  box-shadow: 0 0 12px #666666;
+  color: #000000;
+}
+#toast-container > :hover {
+  opacity: 1;
+  cursor: pointer;
+}
+#toast-container > .toast-info {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDQ4IDIwNDgiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzc3NzU3MyI+DQogIDxwYXRoIGQ9Ik05NjAgMTkyMHEtMTMzIDAtMjU1LTM0dC0yMzAtOTYtMTk0LTE1MC0xNTAtMTk1LTk3LTIyOVQwIDk2MHEwLTEzMyAzNC0yNTV0OTYtMjMwIDE1MC0xOTQgMTk1LTE1MCAyMjktOTdUOTYwIDBxMTMzIDAgMjU1IDM0dDIzMCA5NiAxOTQgMTUwIDE1MCAxOTUgOTcgMjI5IDM0IDI1NnEwIDEzMy0zNCAyNTV0LTk2IDIzMC0xNTAgMTk0LTE5NSAxNTAtMjI5IDk3LTI1NiAzNHptMC0xNzkycS0xMTUgMC0yMjEgMzB0LTE5OCA4NC0xNjkgMTMwLTEzMCAxNjgtODQgMTk5LTMwIDIyMXEwIDExNCAzMCAyMjB0ODQgMTk5IDEzMCAxNjkgMTY4IDEzMCAxOTkgODQgMjIxIDMwcTExNCAwIDIyMC0zMHQxOTktODQgMTY5LTEzMCAxMzAtMTY4IDg0LTE5OSAzMC0yMjFxMC0xMTQtMzAtMjIwdC04NC0xOTktMTMwLTE2OS0xNjgtMTMwLTE5OS04NC0yMjEtMzB6bS02NCA2NDBoMTI4djY0MEg4OTZWNzY4em0wLTI1NmgxMjh2MTI4SDg5NlY1MTJ6IiAvPg0KPC9zdmc+") !important;
+}
+#toast-container > .toast-error {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDQ4IDIwNDgiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI0FBMzIzOCI+DQogIDxwYXRoIGQ9Ik0xMDI0IDBxMTQxIDAgMjcyIDM2dDI0NCAxMDQgMjA3IDE2MCAxNjEgMjA3IDEwMyAyNDUgMzcgMjcycTAgMTQxLTM2IDI3MnQtMTA0IDI0NC0xNjAgMjA3LTIwNyAxNjEtMjQ1IDEwMy0yNzIgMzdxLTE0MSAwLTI3Mi0zNnQtMjQ0LTEwNC0yMDctMTYwLTE2MS0yMDctMTAzLTI0NS0zNy0yNzJxMC0xNDEgMzYtMjcydDEwNC0yNDQgMTYwLTIwNyAyMDctMTYxVDc1MiAzN3QyNzItMzd6bTAgMTkyMHExMjQgMCAyMzgtMzJ0MjE0LTkwIDE4MS0xNDAgMTQwLTE4MSA5MS0yMTQgMzItMjM5cTAtMTI0LTMyLTIzOHQtOTAtMjE0LTE0MC0xODEtMTgxLTE0MC0yMTQtOTEtMjM5LTMycS0xMjQgMC0yMzggMzJ0LTIxNCA5MC0xODEgMTQwLTE0MCAxODEtOTEgMjE0LTMyIDIzOXEwIDEyNCAzMiAyMzh0OTAgMjE0IDE0MCAxODEgMTgxIDE0MCAyMTQgOTEgMjM5IDMyem00NDMtMTI0OWwtMzUyIDM1MyAzNTIgMzUzLTkwIDkwLTM1My0zNTItMzUzIDM1Mi05MC05MCAzNTItMzUzLTM1Mi0zNTMgOTAtOTAgMzUzIDM1MiAzNTMtMzUyIDkwIDkweiIgLz4NCjwvc3ZnPg==") !important;
+}
+#toast-container > .toast-success {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDQ4IDIwNDgiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzMyOTAzMiI+DQogIDxwYXRoIGQ9Ik0xNDkxIDU5NWw5MCA5MC03NDkgNzQ5LTM2NS0zNjUgOTAtOTAgMjc1IDI3NSA2NTktNjU5ek0xMDI0IDBxMTQxIDAgMjcyIDM2dDI0NSAxMDMgMjA3IDE2MCAxNjAgMjA4IDEwMyAyNDUgMzcgMjcycTAgMTQxLTM2IDI3MnQtMTAzIDI0NS0xNjAgMjA3LTIwOCAxNjAtMjQ1IDEwMy0yNzIgMzdxLTE0MSAwLTI3Mi0zNnQtMjQ1LTEwMy0yMDctMTYwLTE2MC0yMDgtMTAzLTI0NC0zNy0yNzNxMC0xNDEgMzYtMjcydDEwMy0yNDUgMTYwLTIwNyAyMDgtMTYwVDc1MSAzN3QyNzMtMzd6bTAgMTkyMHExMjMgMCAyMzctMzJ0MjE0LTkwIDE4Mi0xNDEgMTQwLTE4MSA5MS0yMTQgMzItMjM4cTAtMTIzLTMyLTIzN3QtOTAtMjE0LTE0MS0xODItMTgxLTE0MC0yMTQtOTEtMjM4LTMycS0xMjMgMC0yMzcgMzJ0LTIxNCA5MC0xODIgMTQxLTE0MCAxODEtOTEgMjE0LTMyIDIzOHEwIDEyMyAzMiAyMzd0OTAgMjE0IDE0MSAxODIgMTgxIDE0MCAyMTQgOTEgMjM4IDMyeiIgLz4NCjwvc3ZnPg==") !important;
+}
+#toast-container > .toast-warning {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDQ4IDIwNDgiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzRENEM0NyI+DQogIDxwYXRoIGQ9Ik05NjAgMTkyMHEtMTMzIDAtMjU1LTM0dC0yMzAtOTYtMTk0LTE1MC0xNTAtMTk1LTk3LTIyOVQwIDk2MHEwLTEzMyAzNC0yNTV0OTYtMjMwIDE1MC0xOTQgMTk1LTE1MCAyMjktOTdUOTYwIDBxMTMzIDAgMjU1IDM0dDIzMCA5NiAxOTQgMTUwIDE1MCAxOTUgOTcgMjI5IDM0IDI1NnEwIDEzMy0zNCAyNTV0LTk2IDIzMC0xNTAgMTk0LTE5NSAxNTAtMjI5IDk3LTI1NiAzNHptMC0xNzkycS0xMTUgMC0yMjEgMzB0LTE5OCA4NC0xNjkgMTMwLTEzMCAxNjgtODQgMTk5LTMwIDIyMXEwIDExNCAzMCAyMjB0ODQgMTk5IDEzMCAxNjkgMTY4IDEzMCAxOTkgODQgMjIxIDMwcTExNCAwIDIyMC0zMHQxOTktODQgMTY5LTEzMCAxMzAtMTY4IDg0LTE5OSAzMC0yMjFxMC0xMTQtMzAtMjIwdC04NC0xOTktMTMwLTE2OS0xNjgtMTMwLTE5OS04NC0yMjEtMzB6bS02NCA2NDBoMTI4djY0MEg4OTZWNzY4em0wLTI1NmgxMjh2MTI4SDg5NlY1MTJ6IiAvPg0KPC9zdmc+") !important;
+}
+#toast-container.toast-top-center > div,
+#toast-container.toast-bottom-center > div {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#toast-container.toast-top-full-width > div,
+#toast-container.toast-bottom-full-width > div {
+  min-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.toast {
+  background-color: #FFFFFF;
+}
+.toast-success {
+  background-color: #DFF6DD;
+}
+.toast-error {
+  background-color: #FDE7E9;
+}
+.toast-info {
+  background-color: #F3F2F1;
+}
+.toast-warning {
+  background-color: #FFF4CE !important;
+}
+.toast-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: #000000;
+  opacity: 0.4;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  filter: alpha(opacity=40);
+}
+/*Responsive Design*/
+@media all and (max-width: 240px) {
+  #toast-container > div {
+    padding: 8px 8px 8px 50px;
+    width: 11em;
+  }
+  #toast-container .toast-close-button {
+    right: -0.2em;
+    top: -0.2em;
+  }
+}
+@media all and (min-width: 241px) and (max-width: 480px) {
+  #toast-container > div {
+    padding: 8px 8px 8px 50px;
+    width: 18em;
+  }
+  #toast-container .toast-close-button {
+    right: -0.2em;
+    top: -0.2em;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 768px) {
+  #toast-container > div {
+    padding: 15px 15px 15px 50px;
+    width: 25em;
+  }
+}
